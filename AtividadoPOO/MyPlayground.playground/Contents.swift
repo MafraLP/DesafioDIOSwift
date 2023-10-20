@@ -77,7 +77,7 @@ print("Transações de saque: \(transactions)")
 
 
 
-var acc2 = InterestAccount(number: 2, interestRate: 0.02)
+var acc2 = InterestAccount(number: 2,openingBalance: 0.0, interestRate: 0.02)
 var bank = Bank()
 bank.addAccount(acc1)
 bank.addAccount(acc2)
