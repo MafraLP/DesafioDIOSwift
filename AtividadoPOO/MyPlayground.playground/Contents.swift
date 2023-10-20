@@ -11,10 +11,10 @@ class BankAccount {
     var type: AccountType
     var transactionHistory: [String]
     
-    init(number: Int, openingBalance: Double, type: AccountType) {
+    init(number: Int, openingBalance: Double = 0, type: AccountType) {
         self.number = number
-        self.balance = openingBalance
         self.type = type
+        self.balance = openingBalance
         self.transactionHistory = []
     }
     
@@ -77,7 +77,7 @@ print("Transações de saque: \(transactions)")
 
 
 
-var acc2 = InterestAccount(number: 2, openingBalance: 2000.0, interestRate: 0.02)
+var acc2 = InterestAccount(number: 2, interestRate: 0.02)
 var bank = Bank()
 bank.addAccount(acc1)
 bank.addAccount(acc2)
@@ -92,5 +92,6 @@ Task {
 }
 
 acc1.balance
+acc2.balance
 
 
